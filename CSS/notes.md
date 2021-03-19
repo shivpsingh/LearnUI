@@ -24,4 +24,8 @@ h2[attr=value] {
     /* |= - select everything with contains value seperated with white space and followed by '-' */
 }
 
+body {
+    background: url() cover;
+}
+
 ```
