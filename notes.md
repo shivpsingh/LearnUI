@@ -1,60 +1,62 @@
-# SCSS
+# Learning React
 
-## Sample code sections
+ReactDOM offers a simple method to render React elements to the DOM which looks like this:
 
-Create variables
-
-```scss
-$variable: value
+```jsx
+ReactDOM.render(componentToRender, targetNode)
 ```
 
-Conditions
+Nested JSX must return a single element.
 
-```scss
-@if cond {
+Add Comment
 
-} @else if cond {
+```jsx
+{/* */}
+```
 
-} @else {
+In react `class` attribute should be converted to `className` and all the HTML attributes becomes camelCase.
+Example: onclick becomes onClick.
 
+In JSX, the rules are a little different. Any JSX element can be written with a self-closing tag, and every element must be closed.
+
+The first way is to use a JavaScript function. Defining a component in this way creates a stateless functional component.
+To create a component with a function, you simply write a JavaScript function that returns either JSX or null. One important thing to note is that React requires your function name to begin with a capital letter.
+
+Example:
+
+```jsx
+const MyComponent = function() {
+    return (
+        <div></div>
+    );
 }
 ```
 
-Looping
+Class Way
 
-```scss
-@for $i from 1 through 10 {
-    $i
-}
-```
-
-While Loop
-
-```scss
-$x: 1;
-while $x < 15 {
-    $x: $x + 1
-}
-```
-
-For Each Loop
-
-```scss
-@each $item in black, blue, red {
-    .cls-#{$item} {
-        background-color: $item;
+```jsx
+class MyComponent extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+    render() {
+        return null;
     }
 }
 ```
 
-Iterate over map
+Adding default props - only used if not supplied props
 
-```scss
-$map_val: (
-    color: red,
-    font-size: 15px
-);
-@each $key, $val in $map_val {
-
+```jsx
+MyComponent.defaultProps = {
+  'items': 0
 }
 ```
+
+A stateless functional component is any function you write which accepts props and returns JSX. A stateless component, on the other hand, is a class that extends React.Component, but does not use internal state (covered in the next challenge). Finally, a stateful component is a class component that does maintain its own internal state. You may see stateful components referred to simply as components or React components.
+
+A common pattern is to try to minimize statefulness and to create stateless functional components wherever possible. This helps contain your state management to a specific area of your application. In turn, this improves development and maintenance of your app by making it easier to follow how changes to state affect its behavior.
+
+State consists of any data your application needs to know about, that can change over time. You want your apps to respond to state changes and present an updated UI when necessary.
+
+What this means is that state updates through the setState method can be asynchronous.
