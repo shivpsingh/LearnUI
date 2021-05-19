@@ -60,3 +60,13 @@ A common pattern is to try to minimize statefulness and to create stateless func
 State consists of any data your application needs to know about, that can change over time. You want your apps to respond to state changes and present an updated UI when necessary.
 
 What this means is that state updates through the setState method can be asynchronous.
+This pattern illustrates some important paradigms in React. The first is unidirectional data flow.
+
+LifeCycle Methods
+
+componentWillMount() -- Deprecated and will be removed
+componentDidMount() -- Prefered for API Calls
+shouldComponentUpdate() -- Returns true  or false and checks if component should be rendered
+componentDidUpdate() --
+componentWillUnmount() --
+ReactDOMServer.renderToString
