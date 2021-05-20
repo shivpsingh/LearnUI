@@ -40,3 +40,17 @@ Redux.combineReducers({
     key1: key1Reducer,
     key2: key2Reducer,
 })
+
+## Redux Apply Middleware
+
+Redux middleware is added between action and reducer.
+
+-- create a normal middleware
+
+const logger = (state) => (next) => (action) => {
+    console.log(action);
+    next(action);
+}
+
+-- create a store
+Redux.createStore(reducer, {}, logger)
