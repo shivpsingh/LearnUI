@@ -1,72 +1,42 @@
-# Learning React
+# Redux
 
-ReactDOM offers a simple method to render React elements to the DOM which looks like this:
+Redux is a state management framework that can be used with a number of different web technologies, including React.
 
-```jsx
-ReactDOM.render(componentToRender, targetNode)
-```
+In Redux, there is a single state object that's responsible for the entire state of your application. This means if you had a React app with ten components, and each component had its own local state, the entire state of your app would be defined by a single state object housed in the Redux store. This is the first important principle to understand when learning Redux: the Redux store is the single source of truth when it comes to application state.
 
-Nested JSX must return a single element.
+Redux is a state management framework that can be used with a number of different web technologies, including React.
 
-Add Comment
+In Redux, there is a single state object that's responsible for the entire state of your application. This means if you had a React app with ten components, and each component had its own local state, the entire state of your app would be defined by a single state object housed in the Redux store. This is the first important principle to understand when learning Redux: the Redux store is the single source of truth when it comes to application state.
 
-```jsx
-{/* */}
-```
+## Create a store
 
-In react `class` attribute should be converted to `className` and all the HTML attributes becomes camelCase.
-Example: onclick becomes onClick.
+const store = Redux.createStore(reducer);
 
-In JSX, the rules are a little different. Any JSX element can be written with a self-closing tag, and every element must be closed.
+## Get State from the store
 
-The first way is to use a JavaScript function. Defining a component in this way creates a stateless functional component.
-To create a component with a function, you simply write a JavaScript function that returns either JSX or null. One important thing to note is that React requires your function name to begin with a capital letter.
+const currentState = store.getState();
 
-Example:
+## Create a action to interact with state
 
-```jsx
-const MyComponent = function() {
-    return (
-        <div></div>
-    );
+const action = {
+    type: 'ANYTHING'
 }
-```
 
-Class Way
+## Dispatch
 
-```jsx
-class MyComponent extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-    render() {
-        return null;
-    }
-}
-```
+store.dispatch()
 
-Adding default props - only used if not supplied props
+## Reducer - Pure Function
 
-```jsx
-MyComponent.defaultProps = {
-  'items': 0
-}
-```
+Takes a state, action and returns a new State.
 
-A stateless functional component is any function you write which accepts props and returns JSX. A stateless component, on the other hand, is a class that extends React.Component, but does not use internal state (covered in the next challenge). Finally, a stateful component is a class component that does maintain its own internal state. You may see stateful components referred to simply as components or React components.
+## Subscibing to a store
 
-A common pattern is to try to minimize statefulness and to create stateless functional components wherever possible. This helps contain your state management to a specific area of your application. In turn, this improves development and maintenance of your app by making it easier to follow how changes to state affect its behavior.
+store.subscribe()
 
-State consists of any data your application needs to know about, that can change over time. You want your apps to respond to state changes and present an updated UI when necessary.
+## Combine Multiple Store
 
-What this means is that state updates through the setState method can be asynchronous.
-This pattern illustrates some important paradigms in React. The first is unidirectional data flow.
-
-LifeCycle Methods
-
-componentWillMount() -- Deprecated and will be removed
-componentDidMount() -- Prefered for API Calls
-shouldComponentUpdate() -- Returns true  or false and checks if component should be rendered
-componentDidUpdate() --
-componentWillUnmount() --
-ReactDOMServer.renderToString
+Redux.combineReducers({
+    key1: key1Reducer,
+    key2: key2Reducer,
+})
