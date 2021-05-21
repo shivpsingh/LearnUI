@@ -1,56 +1,39 @@
-# Redux
+# React Redux Integration
 
-Redux is a state management framework that can be used with a number of different web technologies, including React.
+-- What is React?
 
-In Redux, there is a single state object that's responsible for the entire state of your application. This means if you had a React app with ten components, and each component had its own local state, the entire state of your app would be defined by a single state object housed in the Redux store. This is the first important principle to understand when learning Redux: the Redux store is the single source of truth when it comes to application state.
+React is a view library that you provide with data, then it renders the view in an efficient, predictable way.
 
-Redux is a state management framework that can be used with a number of different web technologies, including React.
+-- What is Redux?
 
-In Redux, there is a single state object that's responsible for the entire state of your application. This means if you had a React app with ten components, and each component had its own local state, the entire state of your app would be defined by a single state object housed in the Redux store. This is the first important principle to understand when learning Redux: the Redux store is the single source of truth when it comes to application state.
+Redux is a state management framework that you can use to simplify the management of your application's state.
 
-## Create a store
+To integrate react-redux package is required to be used.
 
-const store = Redux.createStore(reducer);
+Wrap your app with Provider
 
-## Get State from the store
-
-const currentState = store.getState();
-
-## Create a action to interact with state
-
-const action = {
-    type: 'ANYTHING'
+```jsx
+class Test extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+    render() {
+        return (
+            <Provider store={store}>
+                <App />
+            <Provider>
+        );
+    }
 }
+```
 
-## Dispatch
+## Userful methods
 
-store.dispatch()
+-- Behind the scenes React Redux uses store.subscribe() to implement these methods:
 
-## Reducer - Pure Function
+mapStateToProps()
+mapDispatchToProps()
 
-Takes a state, action and returns a new State.
+-- Connect Method
 
-## Subscibing to a store
-
-store.subscribe()
-
-## Combine Multiple Store
-
-Redux.combineReducers({
-    key1: key1Reducer,
-    key2: key2Reducer,
-})
-
-## Redux Apply Middleware
-
-Redux middleware is added between action and reducer.
-
--- create a normal middleware
-
-const logger = (state) => (next) => (action) => {
-    console.log(action);
-    next(action);
-}
-
--- create a store
-Redux.createStore(reducer, {}, logger)
+connect(mapStateToProps, mapDispatchToProps)(Component)
