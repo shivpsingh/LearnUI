@@ -1,60 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
-    <script src="js/index.js"></script>
-    <link rel="stylesheet" href="css/index.css">
-</head>
 
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/index.css">
+
+    <!-- Link JavaScript -->
+    <script src="js/index.js"></script>
+
+    <!-- Title -->
+    <title>Shiv Pratap Singh</title>
+</head>
 <body>
     <header>
-        <nav class="navbar nav-change nav-change-disable">
+        <div class="nav__bar">
             <div class="logo">
-                Blog <span>App</span>
+                <span>_shivpsingh</span>
             </div>
-            <div class="mob-nav-cta">
-                |||
+            <div class="nav__items">
+                <div class="nav__item-mob">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <div class="nav__item-desk">
+                    <ul>
+                        <li>
+                            <a href="#about">About</a>
+                        </li>
+                        <li>
+                            <a href="#about">Articles</a>
+                        </li>
+                        <li>
+                            <a href="#about">Notes</a>
+                        </li>
+                        <li>
+                            <a href="#about">Friends</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="nav-elem">
-                <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Favourites</a></li>
-                    <li><a href="">Settings</a></li>
-                </ul>
+        </div>
+        <div class="hero__space">
+            <div class="hero__content">
+                <h1>Hey All</h1>
+                <h3>I'm Shiv, I'm a Software Engineer, Yotuber and Teacher</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos maxime ducimus mollitia itaque aut error, perspiciatis earum, consequuntur nemo dolorum fuga quae quos ipsa dolorem.</p>
+                <button class="hero__content-cta">Read More</button>
             </div>
-        </nav>
+            <div class="hero__item">
+
+            </div>
+        </div>
     </header>
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Title of Hero</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, corrupti.</p>
-            <button>Check Now</button>
+    <section class="work__section">
+        <h1 class="sub__section underline">Checkout out my works</h1>
+        <div class="work__card">
+            <div class="work__card-ico">
+                <i class="fab fa-algolia"></i>
+            </div>
+            <h1 class="work__title">Productivity</h1>
+            <p class="work__desc">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium, quisquam.
+            </p>
+        </div>
+        <div class="work__card">
+            <div class="work__card-ico">
+                <i class="fab fa-algolia"></i>
+            </div>
+            <h1 class="work__title">Productivity</h1>
+            <p class="work__desc">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium, quisquam.
+            </p>
+        </div>
+        <div class="work__card">
+            <div class="work__card-ico">
+                <i class="fab fa-algolia"></i>
+            </div>
+            <h1 class="work__title">Productivity</h1>
+            <p class="work__desc">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium, quisquam.
+            </p>
         </div>
     </section>
-    <section class="blog-cards">
-        <div class="card">
-            <h1>Card Title</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem reprehenderit consequatur tempora voluptatibus quisquam repudiandae explicabo laudantium dicta impedit obcaecati, quibusdam libero fugiat a omnis?</p>
-            <button>Continue to Read</button>
+    <section class="more__content">
+        <h1 class="sub__section underline">Explore</h1>
+        <div class="explore">
+            <div class="explore__card">
+                <div class="explore__card-left">
+                    <i class="fab fa-algolia"></i>
+                </div>
+                <div class="explore__card-right">
+                    <h1 class="explore__card-title">Lorem ipsum dolor sit amet.</h1>
+                    <p class="explore__card-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, consectetur.</p>
+                </div>
+            </div>
+            <div class="explore__card">
+                <div class="explore__card-left">
+                    <i class="fab fa-algolia"></i>
+                </div>
+                <div class="explore__card-right">
+                    <h1 class="explore__card-title">Lorem ipsum dolor sit amet.</h1>
+                    <p class="explore__card-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, consectetur.</p>
+                </div>
+            </div>
+            <div class="explore__card">
+                <div class="explore__card-left">
+                    <i class="fab fa-algolia"></i>
+                </div>
+                <div class="explore__card-right">
+                    <h1 class="explore__card-title">Lorem ipsum dolor sit amet.</h1>
+                    <p class="explore__card-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, consectetur.</p>
+                </div>
+            </div>
         </div>
-        <div class="card">
-            <h1>Card Title</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem reprehenderit consequatur tempora voluptatibus quisquam repudiandae explicabo laudantium dicta impedit obcaecati, quibusdam libero fugiat a omnis?</p>
-            <button>Continue to Read</button>
-        </div>
-        <div class="card">
-            <h1>Card Title</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem reprehenderit consequatur tempora voluptatibus quisquam repudiandae explicabo laudantium dicta impedit obcaecati, quibusdam libero fugiat a omnis?</p>
-            <button>Continue to Read</button>
+        <div class="latest">
+            <h1 class="sub__section underline">Latest Articles</h1>
+            <div class="latest__content">
+                <h1 class="latest__content-title">Lorem ipsum dolor sit amet.</h1>
+                <p class="latest__content-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et, dolorem.</p>
+            </div>
         </div>
     </section>
-    <footer>
-        <p>&copy;Blog Site</p>
+    <section class="wrapup__section">
+        <div class="wrapup__content">
+            <h1 class="wrapup__content-title">Lorem ipsum dolor sit amet.</h1>
+            <p class="wrapup__content-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam eius laudantium dolorem accusantium! Aut sequi neque, earum ratione qui sit explicabo? Impedit odit animi temporibus. Eligendi eius id sunt quia libero blanditiis itaque architecto corrupti, harum officia veritatis dignissimos recusandae consectetur? Dicta quos corporis tenetur nemo debitis pariatur dolores laborum, libero, necessitatibus commodi cumque, beatae culpa quaerat voluptatem molestiae ad numquam repellendus! Nemo nihil incidunt magni dolorum, beatae delectus numquam molestiae! Laudantium quis voluptate, omnis quidem excepturi voluptatum amet ab sapiente sunt esse consequatur explicabo aut id, ut, maiores harum? Nam quia magni labore! Reiciendis tempore qui ipsum similique. Ullam similique vero tempora quis enim reprehenderit voluptatum, doloremque ducimus quam modi voluptatem porro, sunt deserunt accusantium itaque nobis nemo debitis?</p>
+        </div>
+        <div class="wrapup__form">
+            <form action="#">
+                <label for="name"></label>
+                <input class="form__inp" id="name" name="name" type="text" placeholder="First Name">
+                <label for="email"></label>
+                <input class="form__inp" id="email" name="email" type="email" placeholder="Email Address">
+                <label for="submit"></label>
+                <input class="form__inp" id="submit" name="submit" type="submit" placeholder="Suscribe">
+            </form>
+        </div>
+    </section>
+    <footer class="final__section">
+        <p>&copy; Lorem ipsum dolor sit amet.</p>
+        <div class="social__icons">
+            <i class="fab fa-youtube"></i>
+            <i class="fab fa-facebook-square"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-github"></i>
+            <i class="fab fa-linkedin"></i>
+        </div>
     </footer>
 </body>
-
 </html>
