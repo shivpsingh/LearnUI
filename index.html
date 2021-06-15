@@ -9,9 +9,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/index.css">
 
-    <!-- Link JavaScript -->
-    <script src="js/index.js"></script>
-
     <!-- Title -->
     <title>Shiv Pratap Singh</title>
 </head>
@@ -22,13 +19,13 @@
                 <span>_shivpsingh</span>
             </div>
             <div class="nav__items">
-                <div class="nav__item-mob">
+                <div id="nav__item-mob" class="nav__item-mob">
                     <i class="fas fa-bars"></i>
                 </div>
-                <div class="nav__item-desk">
+                <div id="nav__item-desk" class="nav__item-desk nav__display">
                     <ul>
                         <li>
-                            <a href="#about">About</a>
+                            <a class="active" href="#about">About</a>
                         </li>
                         <li>
                             <a href="#about">Articles</a>
@@ -48,7 +45,7 @@
                 <h1>Hey All</h1>
                 <h3>I'm Shiv, I'm a Software Engineer, Yotuber and Teacher</h3>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos maxime ducimus mollitia itaque aut error, perspiciatis earum, consequuntur nemo dolorum fuga quae quos ipsa dolorem.</p>
-                <button class="hero__content-cta">Read More</button>
+                <button class="hero__content-cta theme-button">Read More</button>
             </div>
             <div class="hero__item">
 
@@ -86,8 +83,8 @@
         </div>
     </section>
     <section class="more__content">
-        <h1 class="sub__section underline">Explore</h1>
         <div class="explore">
+            <h1 class="sub__section underline">Explore</h1>
             <div class="explore__card">
                 <div class="explore__card-left">
                     <i class="fab fa-algolia"></i>
@@ -126,17 +123,19 @@
     </section>
     <section class="wrapup__section">
         <div class="wrapup__content">
+            <h1 class="sub__section underline">Summary</h1>
             <h1 class="wrapup__content-title">Lorem ipsum dolor sit amet.</h1>
             <p class="wrapup__content-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam eius laudantium dolorem accusantium! Aut sequi neque, earum ratione qui sit explicabo? Impedit odit animi temporibus. Eligendi eius id sunt quia libero blanditiis itaque architecto corrupti, harum officia veritatis dignissimos recusandae consectetur? Dicta quos corporis tenetur nemo debitis pariatur dolores laborum, libero, necessitatibus commodi cumque, beatae culpa quaerat voluptatem molestiae ad numquam repellendus! Nemo nihil incidunt magni dolorum, beatae delectus numquam molestiae! Laudantium quis voluptate, omnis quidem excepturi voluptatum amet ab sapiente sunt esse consequatur explicabo aut id, ut, maiores harum? Nam quia magni labore! Reiciendis tempore qui ipsum similique. Ullam similique vero tempora quis enim reprehenderit voluptatum, doloremque ducimus quam modi voluptatem porro, sunt deserunt accusantium itaque nobis nemo debitis?</p>
         </div>
         <div class="wrapup__form">
-            <form action="#">
+            <h1 class="sub__section underline">Suscribe to Newsletter</h1>
+            <form action="#" class="form-ctrl">
                 <label for="name"></label>
                 <input class="form__inp" id="name" name="name" type="text" placeholder="First Name">
                 <label for="email"></label>
                 <input class="form__inp" id="email" name="email" type="email" placeholder="Email Address">
                 <label for="submit"></label>
-                <input class="form__inp" id="submit" name="submit" type="submit" placeholder="Suscribe">
+                <input class="theme-button" id="submit" name="submit" type="submit" value="Suscribe">
             </form>
         </div>
     </section>
@@ -150,5 +149,8 @@
             <i class="fab fa-linkedin"></i>
         </div>
     </footer>
+
+    <!-- Link JavaScript -->
+    <script src="js/index.js"></script>
 </body>
 </html>

@@ -52,8 +52,82 @@ header {
     font-size: 1.4rem;
 }
 
+.nav__bar-toggle {
+    position: fixed;
+    z-index: 1000;
+    color: white;
+    right: 1rem;
+}
+
 .nav__item-desk {
     display: none;
+    background-color: black;
+    color: white;
+    position: fixed;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 2rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav__item-desk ul {
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.nav__item-desk a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.active::after {
+    content: '';
+    width: 70px;
+    height: 2px;
+    background-color: white;
+    display: block;
+    margin-top: 10px;
+}
+
+.nav__item-desk li {
+    list-style: none;
+}
+
+@media only screen and (min-width: 900px) {
+    .nav__bar {
+        padding: 1rem 10rem;
+    }
+    .nav__item-mob {
+        display: none;
+    }
+    .nav__item-desk {
+        display: inline;
+        position: relative;
+        color: var(--clr-dark);
+        font-size: 1em;
+    }
+    .nav__item-desk ul {
+        /* background-color: red; */
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+    }
+    .active {
+        color: var(--clr-theme-main);
+    }
+    .active::after {
+        display: none;
+    }
 }
 
 .logo span {
@@ -89,12 +163,21 @@ header {
     line-height: 1.4;
 }
 
-.hero__content button {
+.theme-button {
     width: 150px;
     height: 50px;
     border: 0;
     background-color: var(--clr-theme-main);
     color: var(--clr-bright);
+}
+
+@media screen and (min-width: 900px) {
+    .hero__content {
+        align-items: flex-start;
+        width: 50%;
+        text-align: left;
+        padding-left: 5rem;
+    }
 }
 
 /* Works */
@@ -144,6 +227,20 @@ header {
     text-align: center;
     line-height: 1.4;
     font-size: 1.2rem;
+}
+
+@media screen and (min-width: 900px) {
+    .work__section {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .sub__section {
+        grid-column: span 3;
+    }
 }
 
 /* Explore */
@@ -205,4 +302,114 @@ header {
     font-size: 1.2rem;
     line-height: 1.1;
     text-align: center;
+}
+
+@media screen and (min-width: 900px) {
+    .more__content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+    .latest > h1 {
+        margin-bottom: 3rem;
+    }
+    .latest__content {
+        align-items: flex-start;
+    }
+    .latest__content-desc {
+        margin-top: 0;
+    }
+}
+
+/* Wrap Up */
+
+.wrapup__section {
+    padding: 1rem;
+    text-align: center;
+}
+
+.wrapup__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.wrapup__content-title {
+    font-size: 1.5rem;
+}
+
+.wrapup__content-desc {
+    font-size: 1.2rem;
+    line-height: 1.2;
+}
+
+.wrapup__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form__inp {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    border: 0;
+}
+
+.form-ctrl {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    gap: .5rem;
+    align-items: center;
+}
+
+@media screen and (min-width: 900px) {
+    .wrapup__section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        padding: 3rem;
+    }
+    .wrapup__content-title {
+        text-align: left;
+    }
+    .wrapup__content-desc {
+        text-align: justify;
+    }
+    .wrapup__form {
+        flex-direction: column;
+        align-items: center;
+    }
+    .wrapup__form {
+        justify-content: flex-start;
+    }
+}
+
+
+.final__section {
+    background-color: var(--clr-dark);
+    height: 100px;
+    color: var(--clr-bright);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    gap: 1rem;
+}
+
+.social__icons {
+    display: flex;
+    gap: 1rem;
+}
+
+@media screen and (min-width: 900px) {
+    .final__section {
+        flex-direction: row;
+        justify-content: space-around;
+    }
 }
